@@ -1,4 +1,5 @@
-<div class="page-header" data-parallax="true" style="background-image: url('./assets/img/daniel-olahh.jpg');">
+<div class="page-header" data-parallax="true" style="background-image: url('./assets/img/beach.jpg');">
+<!-- <div class="page-header" data-parallax="true" style="background-image: url('./assets/img/daniel-olahh.jpg');"> -->
     <div class="filter"></div>
     <!-- <div class="container">
         <div class="motto text-center">
@@ -12,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mr-auto motto ml-auto">
-                <h1 class="text-center">Keep in touch?</h1>
+                <h1 class="text-center" style="margin-top: 10px;">Keep in touch?</h1>
                 <form class="contact-form">
                     <div class="row">
                         <div class="col-md-4">
@@ -26,13 +27,10 @@
                         </div>
                         <div class="col-md-3">
                             <label>Llegada</label>
-                            <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
-                                <!-- <div class="input-group-prepend">
-                                  <span class="input-group-text">  <i class="nc-icon nc-calendar-60"></i></span>
-                                </div> -->
+                            <div class="form-group">
                                 <div class="input-group date" [ngClass]="{'input-group-focus':focus===true}">
                                     <input class="form-control" placeholder="yyyy-mm-dd"
-                                         name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus=true" (blur)="focus=false" />
+                                         name="dp" [(ngModel)]="model" ngbDatepicker #d2="ngbDatepicker" (click)="d2.toggle()" (focus)="focus=true" (blur)="focus=fale" />
                                     <div class="input-group-append">
                                         <span class="glyphicon glyphicon-calendar input-group-text">
                                           <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -43,10 +41,7 @@
                         </div>
                         <div class="col-md-3">
                             <label>Salida</label>
-                            <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
-                                <!-- <div class="input-group-prepend">
-                                  <span class="input-group-text">  <i class="nc-icon nc-calendar-60"></i></span>
-                                </div> -->
+                            <div class="form-group">
                                 <div class="input-group date" [ngClass]="{'input-group-focus':focus===true}">
                                     <input class="form-control" placeholder="yyyy-mm-dd"
                                          name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus=true" (blur)="focus=false" />
