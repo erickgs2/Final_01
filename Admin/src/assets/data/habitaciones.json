@@ -1,0 +1,42 @@
+[
+    {
+        "Id":"00001",
+        "Nombre":"Lunamielera",
+        "Descripcion":"Habitacion especial para toda ocacion",
+        "Capacidad":2,
+        "NoCamas":1,
+        "NoCamaMat":1,
+        "NoCamaInd":0,
+        "NoCamaQueen":0,
+        "NoCamaKing":0,
+        "TipHab":"Doble",
+        "Precio":2000,
+        "HotelId":"0001"
+    },{
+        "Id":"00002",
+        "Nombre":"Doble Individual",
+        "Descripcion":"Habitacion especial para toda ocacion",
+        "Capacidad":2,
+        "NoCamas":2,
+        "NoCamaMat":0,
+        "NoCamaInd":2,
+        "NoCamaQueen":0,
+        "NoCamaKing":0,
+        "TipHab":"Doble",
+        "Precio":1200,
+        "HotelId":"0001"
+    },{
+        "Id":"00003",
+        "Nombre":"Triple Mixta Ind/Qu",
+        "Descripcion":"Habitacion especial para toda ocacion",
+        "Capacidad":3,
+        "NoCamas":2,
+        "NoCamaMat":0,
+        "NoCamaInd":1,
+        "NoCamaQueen":1,
+        "NoCamaKing":0,
+        "TipHab":"Triple",
+        "Precio":1200,
+        "HotelId":"0001"
+    }
+]
