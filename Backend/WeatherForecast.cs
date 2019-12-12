@@ -1,6 +1,6 @@
 using System;
 
-namespace UserApi
+namespace UsersApiMongo
 {
     public class WeatherForecast
     {
