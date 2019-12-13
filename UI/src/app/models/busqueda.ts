@@ -13,4 +13,5 @@ export interface SearchModel{
     status?: string;
     cantidad?: number;
     img?: string;
+    ciudad?: string;
 }

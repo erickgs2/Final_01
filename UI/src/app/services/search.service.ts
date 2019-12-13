@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { SearchModel } from 'app/models/busqueda';
 
+//const URL_PRODUCTS='/api/habitaciones'
 const URL_PRODUCTS = 'https://flashp.azurewebsites.net/api/habitaciones';
 
 @Injectable({
@@ -19,7 +20,7 @@ export class SearchService {
   getBySearch(searching: string){
     return new Observable(observer => {
       this.getAll().subscribe((data:SearchModel[]) => {
-        const filter = data.filter(item => item.des.toLowerCase() == searching.toLowerCase() || item.des.toLowerCase().includes(searching));
+        const filter = data.filter(item => item.ciudad.toLowerCase() == searching.toLowerCase() || item.ciudad.toLowerCase().includes(searching));
         observer.next(filter);
         console.log(searching);
         
