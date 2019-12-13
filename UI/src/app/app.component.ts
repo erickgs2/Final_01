@@ -9,13 +9,8 @@ import { AuthenticationService } from './services';
 import { User } from './models/user';
 
 //Inicia cors
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
-//Finaliza cors
 
+//Finaliza cors
 
 @Component({
     selector: 'app-root',
