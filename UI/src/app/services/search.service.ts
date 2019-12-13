@@ -20,7 +20,7 @@ export class SearchService {
   getBySearch(searching: string){
     return new Observable(observer => {
       this.getAll().subscribe((data:SearchModel[]) => {
-        const filter = data.filter(item => item.ciudad.toLowerCase() == searching.toLowerCase() || item.ciudad.toLowerCase().includes(searching));
+        const filter = data.filter(item => item.ciudad.toLowerCase() == searching.toLowerCase() || item.ciudad.toLowerCase().includes(searching) || item.des.toLowerCase().includes(searching));
         observer.next(filter);
         console.log(searching);
         
