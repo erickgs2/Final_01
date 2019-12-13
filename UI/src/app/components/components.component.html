@@ -22,7 +22,7 @@
                                 <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="nc-icon nc-pin-3"></i></span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="search" class="form-control" placeholder="Ciudad" aria-label="search" #txtSearch (keyup.enter)="search(txtSearch.value)" (focus)="focus=true" (blur)="focus=false" >
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -55,7 +55,7 @@
                         </div>
                         <div class="col-md-2">
                                 <div class=" date" >
-                                    <a href="#" target="_blank" class="btn btn-danger btn-round" style="margin-top: 43px; background-color: #DE503E; border-color: #DE503E;">Buscar</a>
+                                    <a class="btn btn-danger btn-round" (click)="search(txtSearch.value)" type="button" style="margin-top: 43px; background-color: #DE503E; border-color: #DE503E;">Buscar</a>
                                 </div>
                         </div>
                     </div>

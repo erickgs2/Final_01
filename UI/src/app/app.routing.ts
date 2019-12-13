@@ -20,7 +20,7 @@ const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'login',      component: LoginComponent },
-    { path: 'busqueda',      component: BusquedaComponent }
+    { path: 'busqueda/:criterio',      component: BusquedaComponent }
 ];
 
 @NgModule({
