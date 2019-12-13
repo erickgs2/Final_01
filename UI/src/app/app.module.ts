@@ -18,6 +18,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
 import { LoginComponent } from './shared/login/login.component';
+import { BusquedaComponent } from './shared/busqueda/busqueda.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { LoginComponent } from './shared/login/login.component';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    BusquedaComponent
   ],
   imports: [
     BrowserModule,

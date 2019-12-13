@@ -10,6 +10,7 @@ import { LandingComponent } from './examples/landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { LoginComponent } from './shared/login/login.component';
 import { AuthGuard } from './helpers';
+import { BusquedaComponent } from './shared/busqueda/busqueda.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes =[
     { path: 'signup',           component: SignupComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
-    { path: 'login',      component: LoginComponent }
+    { path: 'login',      component: LoginComponent },
+    { path: 'busqueda',      component: BusquedaComponent }
 ];
 
 @NgModule({
