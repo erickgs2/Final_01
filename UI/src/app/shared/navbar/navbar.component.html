@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" [routerLink]="['/home']">Flash P</a>
+            <img class="ml-3" style="width: 40px;" src="./../../../assets/img/logo.png">
+            <!-- <a class="navbar-brand" [routerLink]="['/home']">Flash P</a> -->
             <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
                 <span class="navbar-toggler-bar"></span>
                 <span class="navbar-toggler-bar"></span>
@@ -34,11 +35,15 @@
                         <p class="d-lg-none">GitHub</p>
                     </a>
                 </li> -->
-                <li class="nav-item" routerLinkActive="active" *ngIf="!isDocumentation()">
+                <li class="nav-item">
+                    <a *ngIf="breadcrumb.title == 'Home'" class="nav-link ml-0 mr-5 " href="#">{{breadcrumb.title}}</a>
+                    <a *ngIf="breadcrumb.title != 'Home'" class="nav-link ml-0 mr-5 " href="#">HOME / {{breadcrumb.title}}</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
                     <a class="nav-link ml-0 mr-0 " [routerLink]="['/login']" style="padding: 10px 5px;">Ingresar</a>
                 </li>
 
-                <li class="nav-item" *ngIf="!isDocumentation()">
+                <li class="nav-item" >
                     <a class="nav-link ml-0 mr-0 " [routerLink]="['/signup']" style="padding: 10px 5px;">Registrar</a>
                 </li>
                 <!-- <li class="nav-item" *ngIf="isHome()">
@@ -54,13 +59,7 @@
             </ul>
         </div>
     </div>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#"><i class="fa {{breadcrumb.icon}}"></i> {{breadcrumb.title}}</a></li>
-          <!--<li class="breadcrumb-item"><a href="#">Library</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Data</li>-->
-        </ol>
-      </nav>
+
 </nav>
 
 

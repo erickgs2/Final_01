@@ -14,13 +14,16 @@ export class BusquedaComponent implements OnInit {
   ciudad: SearchModel[]=[];
   searching: string='';
 
-  constructor(private router: ActivatedRoute, private searchSvc: SearchService, private route2: Router) { 
+  constructor(private router: ActivatedRoute,private nav: Router, private searchSvc: SearchService, private route2: Router) { 
     this.router.params.subscribe(params => {
       this.searching=params['criterio'];
       this.searchSvc.getBySearch(this.searching).subscribe((data: SearchModel[])=>{
         this.ciudad=data;
       })
     })
+  }
+  VerDetalle(codigo:string ){
+    this.nav.navigate(['detalle',codigo])
   }
 
   ngOnInit() {

@@ -20,6 +20,7 @@ import { ExamplesModule } from './examples/examples.module';
 import { LoginComponent } from './shared/login/login.component';
 import { BusquedaComponent } from './shared/busqueda/busqueda.component';
 import { MicroServicioComponent } from './shared/micro-servicio/micro-servicio.component';
+import { DetalleComponent } from './examples/detalle/detalle.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MicroServicioComponent } from './shared/micro-servicio/micro-servicio.c
     FooterComponent,
     LoginComponent,
     BusquedaComponent,
-    MicroServicioComponent
+    MicroServicioComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
