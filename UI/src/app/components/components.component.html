@@ -22,7 +22,8 @@
                                 <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="nc-icon nc-pin-3"></i></span>
                                 </div>
-                                <input type="search" class="form-control" placeholder="Ciudad/Descripción" aria-label="search" #txtSearch (keyup.enter)="search(txtSearch.value)" (focus)="focus=true" (blur)="focus=false" required >
+                                <input type="search" class="form-control" placeholder="Ciudad/Descripción" aria-label="search" #txtSearch (keyup.enter)="search(txtSearch.value)" (focus)="focus=true" (blur)="focus=false">
+                                    <!--<div *ngIf="f.cuadroSearch.errors.required">Es necesario capturar destino</div>-->
                             </div>
                         </div>
                         <div class="col-md-3">

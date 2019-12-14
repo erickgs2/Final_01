@@ -1,4 +1,5 @@
-<!--<div class="card">
+<!--<div class="card" *ngFor="let prod of ciudad">
+  <img src="{{prod.img}}" class="card-img-top" alt="...">
     <h5 class="card-header">Featured</h5>
     <div class="card-body">
       <h5 class="card-title">Special title treatment</h5>
@@ -13,7 +14,7 @@
           <div class="card-body">
           <h5 class="card-title">{{prod.des}}</h5>
           <p class="card-text">{{prod.nombre}}</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a href="#" class="btn btn-primary">Ver habitaciones</a>
           </div>
       </div>
   </div> 
