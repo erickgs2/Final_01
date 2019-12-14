@@ -8,6 +8,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AuthenticationService } from './services';
 import { User } from './models/user';
 
+//Inicia cors
+
+//Finaliza cors
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',

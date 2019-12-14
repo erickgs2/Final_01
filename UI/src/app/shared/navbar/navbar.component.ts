@@ -1,16 +1,24 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { filter, map } from "rxjs/operators";
+import { Router, ActivationEnd } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss']
 })
+
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
+    
+    breadcrumb: any={};
 
-    constructor(public location: Location, private element : ElementRef) {
+    constructor(public location: Location, private element : ElementRef, private router: Router) {
+        this._getBreadcrumb().subscribe(event =>{
+            this.breadcrumb=event;
+          });
         this.sidebarVisible = false;
     }
 
@@ -18,6 +26,13 @@ export class NavbarComponent implements OnInit {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
     }
+
+    search(criterio: string){
+        this.router.navigate(['/busqueda', criterio])
+        //console.log('El criterio de busqueda es '), criterio;
+        //console.log(criterio);
+      }
+
     sidebarOpen() {
         const toggleButton = this.toggleButton;
         const html = document.getElementsByTagName('html')[0];
@@ -71,4 +86,11 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
+
+    _getBreadcrumb(){
+        return this.router.events.pipe(
+          filter(event => event instanceof ActivationEnd),
+          map((event: ActivationEnd) => event.snapshot.data)
+        )
+      }
 }

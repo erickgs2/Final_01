@@ -1,0 +1,7 @@
+{
+    "/api/*":{
+    "target": "https://flashp.azurewebsites.net",
+    "secure": false,
+    "changeOrigin": true
+    }
+    }

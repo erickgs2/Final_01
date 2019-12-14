@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
+//import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // used to create fake backend
@@ -17,6 +18,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
 import { LoginComponent } from './shared/login/login.component';
+import { BusquedaComponent } from './shared/busqueda/busqueda.component';
+import { MicroServicioComponent } from './shared/micro-servicio/micro-servicio.component';
 
 
 @NgModule({
@@ -24,7 +27,9 @@ import { LoginComponent } from './shared/login/login.component';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    BusquedaComponent,
+    MicroServicioComponent
   ],
   imports: [
     BrowserModule,
