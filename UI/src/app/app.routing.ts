@@ -14,13 +14,13 @@ import { BusquedaComponent } from './shared/busqueda/busqueda.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home',             component: ComponentsComponent },
+    { path: 'home',             component: ComponentsComponent, data: { title: 'Home', icon: '' } },
     { path: 'user-profile',     component: ProfileComponent },
-    { path: 'signup',           component: SignupComponent },
+    { path: 'signup',           component: SignupComponent, data: { title: 'Registro', icon: '' } },
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
-    { path: 'login',      component: LoginComponent },
-    { path: 'busqueda/:criterio',      component: BusquedaComponent }
+    { path: 'login',      component: LoginComponent, data: { title: 'Inicio de sesión', icon: '' } },
+    { path: 'busqueda/:criterio',      component: BusquedaComponent, data: { title: 'Resultados', icon: '' } }
 ];
 
 @NgModule({

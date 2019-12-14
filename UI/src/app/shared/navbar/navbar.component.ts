@@ -8,11 +8,17 @@ import { Router, ActivationEnd } from '@angular/router';
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss']
 })
+
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
+    
+    breadcrumb: any={};
 
     constructor(public location: Location, private element : ElementRef, private router: Router) {
+        this._getBreadcrumb().subscribe(event =>{
+            this.breadcrumb=event;
+          });
         this.sidebarVisible = false;
     }
 
@@ -80,4 +86,11 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
+
+    _getBreadcrumb(){
+        return this.router.events.pipe(
+          filter(event => event instanceof ActivationEnd),
+          map((event: ActivationEnd) => event.snapshot.data)
+        )
+      }
 }
