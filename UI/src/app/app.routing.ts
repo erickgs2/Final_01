@@ -11,6 +11,7 @@ import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.compo
 import { LoginComponent } from './shared/login/login.component';
 import { AuthGuard } from './helpers';
 import { BusquedaComponent } from './shared/busqueda/busqueda.component';
+import { MicroServicioComponent } from './shared/micro-servicio/micro-servicio.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'login',      component: LoginComponent, data: { title: 'Inicio de sesión', icon: '' } },
-    { path: 'busqueda/:criterio',      component: BusquedaComponent, data: { title: 'Resultados', icon: '' } }
+    { path: 'busqueda/:criterio',      component: BusquedaComponent, data: { title: 'Resultados', icon: '' } },
+    { path: 'microServicio',      component: MicroServicioComponent, data: { title: 'Microservicio', icon: '' } }
 ];
 
 @NgModule({
