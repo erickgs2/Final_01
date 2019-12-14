@@ -1,0 +1,90 @@
+{
+    "microService": "Auth",
+    "enviroment": "Production",
+    "status": 200,
+    "message": "SUCCESS",
+    "description": "Consulta de Usuarios realizada con éxito.",
+    "data": {
+        "users": [
+            {
+                "urlImage": "https://lh3.googleusercontent.com/a-/AAuE7mDFZVcsSzF2ftVb-HRrNMa829RVvNoLEHokPjhptg",
+                "verifyEmail": true,
+                "status": "Enabled",
+                "_id": "5dadffffa7973d5ecd311c78",
+                "email": "jlrosasp@gmail.com",
+                "fullName": "José Luis Rosas Peimbert",
+                "apps": []
+            },
+            {
+                "urlImage": null,
+                "verifyEmail": true,
+                "status": "Enabled",
+                "_id": "5de89e8ff044611a0a42a735",
+                "email": "jlrosasp@ipera4.com",
+                "fullName": "Jose Luis Rosas Peimbert",
+                "apps": [
+                    {
+                        "status": "Enabled",
+                        "enabled": true,
+                        "roles": [
+                            "5de89fe0cb575d55931ed603"
+                        ],
+                        "uid": "5ddc9db284284e5920cbc36f"
+                    }
+                ]
+            },
+            {
+                "urlImage": null,
+                "verifyEmail": true,
+                "status": "Enabled",
+                "_id": "5de91a97e20a2c3e15c1cde4",
+                "email": "jlrosasp@hotmail.com",
+                "fullName": "Gabriel Acevedo",
+                "apps": [
+                    {
+                        "status": "Enabled",
+                        "enabled": true,
+                        "roles": [
+                            "5ddca44fb1414227cd1022ad"
+                        ],
+                        "uid": "5ddc9db284284e5920cbc36f"
+                    }
+                ]
+            }
+        ],
+        "pagination": {
+            "totalItems": 5,
+            "currentPage": 1,
+            "pageSize": 3,
+            "totalPages": 2,
+            "startPage": 1,
+            "endPage": 2,
+            "startIndex": 0,
+            "endIndex": 2,
+            "pages": [
+                1,
+                2
+            ]
+        },
+        "authUser": {
+            "payload": {
+                "uid": "5de91a97e20a2c3e15c1cde4",
+                "email": "jlrosasp@hotmail.com",
+                "fullName": "Gabriel Acevedo",
+                "urlImage": null,
+                "isOAuth2Login": false,
+                "authDataProvider": {
+                    "name": "prasa"
+                },
+                "sapUserUID": 85,
+                "roles": [
+                    {
+                        "name": "PRASA_VENTAS_ROL"
+                    }
+                ]
+            },
+            "iat": 1576283903,
+            "exp": 1576298303
+        }
+    }
+}
