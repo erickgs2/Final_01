@@ -15,8 +15,10 @@ export class DetalleComponent implements OnInit {
   constructor(private router: ActivatedRoute, private productSvc: HabService) {
     this.router.params.subscribe(params =>{
       const code=params['code'];
-      this.productSvc.getAll().subscribe((data: Habitacion[]) => {
-        this.habitacion=data.find(dat => dat.id == code);
+      this.productSvc.getById(code).subscribe((data: Habitacion) => {
+        console.log(data);
+        console.log("jala")
+        this.habitacion=data;
       })
       
     })

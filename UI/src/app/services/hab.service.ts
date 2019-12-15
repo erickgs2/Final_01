@@ -11,4 +11,9 @@ export class HabService {
     getAll() {
         return this.http.get<Habitacion[]>(`${environment.apiUrl}/habitaciones`);
     }
+
+    getById(id: string) {
+        return this.http.post<Habitacion>
+        (`https://flashp.azurewebsites.net/api/habitaciones/byId`, { id });
+    }
 }
