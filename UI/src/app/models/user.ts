@@ -12,4 +12,5 @@ export class User {
     pwd: string;
     img?: string;
     status: string;
+    cart:string[];
 }

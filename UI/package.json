@@ -35,6 +35,7 @@
     "jquery": "3.2.1",
     "jw-bootstrap-switch-ng2": "2.0.1",
     "ng2-nouislider": "1.7.12",
+    "ngx-cookie-service": "^2.2.0",
     "nouislider": "9.2.0",
     "pnotify": "^4.0.0",
     "popper.js": "1.14.4",

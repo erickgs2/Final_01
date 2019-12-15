@@ -22,9 +22,7 @@ export class BusquedaComponent implements OnInit {
       })
     })
   }
-  VerDetalle(codigo:string ){
-    this.nav.navigate(['detalle',codigo])
-  }
+
 
   ngOnInit() {
   }

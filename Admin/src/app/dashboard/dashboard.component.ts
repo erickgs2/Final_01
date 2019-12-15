@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CookieService } from 'angular2-cookie';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +11,13 @@ import * as Chartist from 'chartist';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  UserId: string;
+
+  constructor(private route: ActivatedRoute, private cookie: CookieService) { 
+    console.log(this.cookie.get("key"))
+
+
+  }
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;

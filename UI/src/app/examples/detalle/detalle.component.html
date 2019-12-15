@@ -1,8 +1,8 @@
 
-<div class="section section-image section-login" style="background-image: url('assets/img/ilya-yakover.jpg');">
-  <div class="container">
+<div class="page-header" style="background-image: url('assets/img/ilya-yakover.jpg');">
+  <div class="container" >
     
-    <h2 class="title ml-3 mt-10" style="font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: 30px; font-weight: 400;">{{habitacion.nombre}}</h2>
+    <h2 class="title ml-3" style="font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: 30px; font-weight: 400;">{{habitacion.nombre}}</h2>
     <br>
         <div class="mt-10 row">
       <div class="col-md-6">
@@ -18,36 +18,19 @@
           </ngb-carousel>
         </div>
       </div>
-      <div class="col-md-6">
-  
-        <div class="nav-tabs-navigation" style="color: white">
-          <div class="nav-tabs-wrapper">
-            <ngb-tabset [justify]="'left'">
-              <ngb-tab style="color:white" title="Descripcion">
-                <ng-template ngbTabContent>
-                  <p>Hotel: {{habitacion.hotelId}}</p>
-                  <p>Tipo de habitacion: {{habitacion.tipo}}</p>
-                  <p>Capacidad de personas: {{habitacion.cantidad}}</p>
-                  <p>Numero de Camas: {{habitacion.camas}}</p>
-                  <p>{{habitacion.des}}</p>
-                  <p>Precio: {{habitacion.precio}}</p>
-                </ng-template>
-                
-              </ngb-tab>
-              <ngb-tab style="color:white" title="Profile">
-                <ng-template ngbTabContent>
-                  <p>Here are your messages.</p>
-                </ng-template>
-              </ngb-tab>
-              <ngb-tab style="color:white" title="Messages">
-                <ng-template ngbTabContent>
-                  <p>Here are your messages.</p>
-                </ng-template>
-              </ngb-tab>
-            </ngb-tabset>
-          </div>
-        </div>
-        <h3 class="title ml-3 mt-10" style="font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: 23px; text-align: right; font-weight: 400;">${{habitacion.precio}}.00 MXN</h3>
+      <div class="col-md-6"  style="color:white">
+
+
+          <h3>{{habitacion.des}}</h3>
+                  <h3>Hotel: {{habitacion.hotelId}}</h3>
+                  <h3>Tipo de habitacion: {{habitacion.tipo}}</h3>
+                  <h3>Capacidad de personas: {{habitacion.cantidad}}</h3>
+                  <h3>Numero de Camas: {{habitacion.camas}}</h3>
+                  <h3>Precio: {{habitacion.precio}}</h3>
+
+        <h3 class="title ml-3 mt-10" 
+        
+        style="font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: 23px; text-align: right; font-weight: 400;">${{habitacion.precio}}.00 MXN</h3>
 
       </div>
 

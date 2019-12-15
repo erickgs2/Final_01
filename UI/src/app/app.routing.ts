@@ -7,6 +7,7 @@ import { ComponentsComponent } from './components/components.component';
 import { ProfileComponent } from './examples/profile/profile.component';
 import { SignupComponent } from './examples/signup/signup.component';
 import { DetalleComponent } from './examples/detalle/detalle.component';
+import { CarritoComponent } from './examples/carrito/carrito.component';
 import { LandingComponent } from './examples/landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { LoginComponent } from './shared/login/login.component';
@@ -22,6 +23,7 @@ const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'login',      component: LoginComponent, data: { title: 'Inicio de sesión', icon: '' } },
+    { path: 'cart',      component: CarritoComponent, data: { title: 'Carrito', icon: '' } },
     { path: 'detalle/:code',      component: DetalleComponent, data: { title: 'Detalle de Habitacion', icon: '' } },
     { path: 'busqueda/:criterio',      component: BusquedaComponent, data: { title: 'Resultados', icon: '' } },
     { path: 'microServicio',      component: MicroServicioComponent, data: { title: 'Microservicio', icon: '' } }

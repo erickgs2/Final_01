@@ -3,6 +3,9 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 import { filter, map } from "rxjs/operators";
 import { Router, ActivationEnd } from '@angular/router';
 
+import { CookieService } from 'ngx-cookie-service';
+
+
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
@@ -15,7 +18,10 @@ export class NavbarComponent implements OnInit {
     
     breadcrumb: any={};
 
-    constructor(public location: Location, private element : ElementRef, private router: Router) {
+    constructor(public location: Location, 
+        private element : ElementRef, 
+        private cookieService: CookieService,
+        private router: Router) {
         this._getBreadcrumb().subscribe(event =>{
             this.breadcrumb=event;
           });
@@ -92,5 +98,14 @@ export class NavbarComponent implements OnInit {
           filter(event => event instanceof ActivationEnd),
           map((event: ActivationEnd) => event.snapshot.data)
         )
+      }
+
+      cart(){
+          var key = this.cookieService.get('key');
+        if(key == null){
+            this.router.navigate(['/login']);
+        }else{
+            this.router.navigate(['/cart']);
+        }
       }
 }

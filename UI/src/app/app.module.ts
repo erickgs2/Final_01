@@ -9,6 +9,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // used to create fake backend
 import {  ErrorInterceptor } from './helpers';
+import { CookieService } from 'ngx-cookie-service';
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -20,6 +22,7 @@ import { LoginComponent } from './shared/login/login.component';
 import { BusquedaComponent } from './shared/busqueda/busqueda.component';
 import { MicroServicioComponent } from './shared/micro-servicio/micro-servicio.component';
 import { DetalleComponent } from './examples/detalle/detalle.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -30,7 +33,8 @@ import { DetalleComponent } from './examples/detalle/detalle.component';
     LoginComponent,
     BusquedaComponent,
     MicroServicioComponent,
-    DetalleComponent
+    DetalleComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ import { DetalleComponent } from './examples/detalle/detalle.component';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
+    CookieService
     // provider used to create fake backend
   ],
   bootstrap: [AppComponent]

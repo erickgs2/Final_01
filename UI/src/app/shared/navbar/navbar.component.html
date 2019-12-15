@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
-    <div class="container">
+<!-- <nav class="navbar navbar-expand-lg fixed-top" color-on-scroll="500"> -->
+<div class="container">
         <div class="navbar-translate">
             <img class="ml-3" style="width: 40px;" src="./../../../assets/img/logo.png">
             <!-- <a class="navbar-brand" [routerLink]="['/home']">Flash P</a> -->
@@ -45,6 +46,13 @@
 
                 <li class="nav-item" >
                     <a class="nav-link ml-0 mr-0 " [routerLink]="['/signup']" style="padding: 10px 5px;">Registrar</a>
+                </li>
+
+                <li class="nav-item" >
+                    <div class="icon "  style="color: white;">
+                        <i class="nav-link ml-1 mr-0 nc-icon nc-cart-simple" (click)="cart();" style="font-size: 18px;margin-top: 10px;"></i>
+                        <div style="background-color: tomato; width: 15px; height: 155x; font-size: 12px; color: white; border-radius: 50%; position: relative;text-align: center; padding: 0px; top: -39px; right: -30px;">0</div>
+                    </div>                
                 </li>
                 <!-- <li class="nav-item" *ngIf="isHome()">
                     <a href="https://www.creative-tim.com/product/paper-kit-2-pro-angular?ref=pk2-angular-free-local" target="_blank" class="btn btn-danger btn-round">Upgrade to Pro</a>

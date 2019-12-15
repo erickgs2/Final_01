@@ -5,8 +5,9 @@ import { first } from 'rxjs/operators';
 import { UserService } from 'app/services/user.service';
 export * from './login.component';
 
+import { CookieService } from 'ngx-cookie-service';
+
 import { AuthenticationService } from 'app/services';
-import { CookieService } from 'angular2-cookie';
 import { User } from 'app/models';
 
 @Component({ templateUrl: 'login.component.html' })
@@ -19,16 +20,15 @@ export class LoginComponent implements OnInit {
     usr: User;
     constructor(
         private formBuilder: FormBuilder,
-        private route: ActivatedRoute,
-        private router: Router,
         private _userService: UserService,
-        private cookie: CookieService,
-        private authenticationService: AuthenticationService
+        private router : Router,
+        private cookieService: CookieService
+
     ) {
         // redirect to home if already logged in
-        if (this.authenticationService.currentUserValue) {
-            this.router.navigate(['/']);
-        }
+        // if (this.authenticationService.currentUserValue) {
+        //     this.router.navigate(['/']);
+        // }
     }
 
     ngOnInit() {
@@ -37,8 +37,6 @@ export class LoginComponent implements OnInit {
             password: ['', Validators.required]
         });
 
-        // get return url from route parameters or default to '/'
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
 
     // convenience getter for easy access to form fields
@@ -53,24 +51,15 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
-        // this.authenticationService.login(this.f.username.value, this.f.password.value)
-        //     .pipe(first())
-        //     .subscribe(
-        //         data => {
-        //             this.router.navigate([this.returnUrl]);
-        //         },
-        //         error => {
-        //             this.error = error;
-        //             this.loading = false;
-        //         });
-        this._userService.login(this.f.username.value, this.f.password.value).subscribe(data=> {
 
-            console.log("Admin")
-                // this.router.navigateByUrl('http://localhost:3200');
-                this.cookie.put("usr", data.id)
-                document.location.href = 'http://localhost:3200';
-            
-        },error => {
+        this._userService.login(this.f.username.value, this.f.password.value).subscribe(data => {
+
+            // this.router.navigateByUrl('http://localhost:3200');
+            // document.location.href = 'http://localhost:3200/dashboard?id='+data.id;
+            this.cookieService.set( 'key', data.id );
+            this.router.navigate(['/home']);
+
+        }, error => {
             this.error = "Usuario o contraseña incorrectos";
             this.loading = false;
         })
