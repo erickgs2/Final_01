@@ -11,4 +11,7 @@ export class UserService {
     getAll() {
         return this.http.get<User[]>(`${environment.apiUrl}/users`);
     }
+    login(user:string, pwd:string){
+        return this.http.post<User>(`${environment.apiUrl}/login`,{"nickname":user,"pwd":pwd});
+    }
 }

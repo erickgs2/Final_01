@@ -16,8 +16,6 @@ export class DetalleComponent implements OnInit {
     this.router.params.subscribe(params =>{
       const code=params['code'];
       this.productSvc.getById(code).subscribe((data: Habitacion) => {
-        console.log(data);
-        console.log("jala")
         this.habitacion=data;
       })
       
