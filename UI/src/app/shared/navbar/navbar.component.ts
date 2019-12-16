@@ -2,6 +2,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { filter, map } from "rxjs/operators";
 import { Router, ActivationEnd } from '@angular/router';
+import { UserService } from 'app/services/user.service';
+import { User } from 'app/models/user';
 
 import { CookieService } from 'ngx-cookie-service';
 
@@ -17,20 +19,34 @@ export class NavbarComponent implements OnInit {
     private sidebarVisible: boolean;
     
     breadcrumb: any={};
+    key:string;
+    UserLogged: User;
+    cartCount: number = 0;
 
     constructor(public location: Location, 
         private element : ElementRef, 
         private cookieService: CookieService,
+        private _userService: UserService,
         private router: Router) {
         this._getBreadcrumb().subscribe(event =>{
             this.breadcrumb=event;
           });
         this.sidebarVisible = false;
+
+        this.key = this.cookieService.get('key');
+        if(this.key.length > 0){
+        this._userService.getById(this.key).subscribe((data: User) => {
+            this.UserLogged=data;
+            this.cartCount = data.cart.length;
+          })
+        }
     }
 
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+
+
     }
 
     search(criterio: string){
@@ -101,8 +117,7 @@ export class NavbarComponent implements OnInit {
       }
 
       cart(){
-          var key = this.cookieService.get('key');
-        if(key == null){
+        if(this.key.length < 1){
             this.router.navigate(['/login']);
         }else{
             this.router.navigate(['/cart']);

@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
 
             // this.router.navigateByUrl('http://localhost:3200');
             // document.location.href = 'http://localhost:3200/dashboard?id='+data.id;
-            this.cookieService.set( 'key', data.id );
+            this.cookieService.set( 'key', data.nickname );
             this.router.navigate(['/home']);
 
         }, error => {

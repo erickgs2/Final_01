@@ -14,4 +14,7 @@ export class UserService {
     login(user:string, pwd:string){
         return this.http.post<User>(`${environment.apiUrl}/login`,{"nickname":user,"pwd":pwd});
     }
+    getById(nickname: string) {
+        return this.http.post<User>(`https://flashp.azurewebsites.net/api/users/byId`, { nickname });
+    }
 }
