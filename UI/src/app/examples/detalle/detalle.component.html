@@ -35,7 +35,10 @@
           <h3>Capacidad de personas: {{habitacion.cantidad}}</h3><br>
           <h3>Numero de Camas: {{habitacion.camas}}</h3><br>
           <h3>Precio: {{habitacion.precio}}</h3><br>
-          <h3><a class="btn btn-danger btn-round" type="button" style="margin-top: 32px; background-color: #DE503E; border-color: #DE503E;"onclick="location.href='http://localhost:4200/#/cart'">Add to Cart</a></h3>
+          <!--<h3><a class="btn btn-danger btn-round" type="button" style="margin-top: 32px; background-color: #DE503E; border-color: #DE503E;"onclick="location.href='http://localhost:4200/#/cart'">Add to Cart</a></h3>-->
+          <div class="cta">
+            <button class="btn" (click)="onAddToCart">Agregar a reservas<span class="bg" ></span></button>
+          </div>
 
         <h3 class="title ml-10 mt-400" 
         type= "button "style="font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: 23px; text-align: right; font-weight: 400;">${{habitacion.precio}}.00 MXN</h3>
