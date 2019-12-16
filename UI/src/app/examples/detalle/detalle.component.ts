@@ -6,7 +6,7 @@ import { Habitacion } from 'app/models/habitacion';
 @Component({
   selector: 'app-detalle',
   templateUrl: './detalle.component.html',
-  styleUrls: ['./detalle.component.scss']
+  styleUrls: ['./detalle.component.css']
 })
 export class DetalleComponent implements OnInit {
   

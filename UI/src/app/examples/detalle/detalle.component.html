@@ -1,9 +1,14 @@
 
 <div class="page-header" style="background-image: url('assets/img/ilya-yakover.jpg');">
   <div class="container" >
-    
-    <h2 class="title ml-3" style="font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: 30px; font-weight: 400;">{{habitacion.nombre}}</h2>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 class="title ml-3" style="font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: 30px; font-weight: 400;">{{habitacion.nombre}}</h2><br>
+   
         <div class="mt-10 row">
       <div class="col-md-6">
         <div class="card page-carousel">
@@ -19,22 +24,22 @@
         </div>
       </div>
       <div class="col-md-6"  style="color:white">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+          <h3>{{habitacion.des}}</h3><br>
+          <h3>Hotel: {{habitacion.nombre}}</h3><br>
+          <h3>Tipo de habitacion: {{habitacion.tipo}}</h3><br>
+          <h3>Capacidad de personas: {{habitacion.cantidad}}</h3><br>
+          <h3>Numero de Camas: {{habitacion.camas}}</h3><br>
+          <h3>Precio: {{habitacion.precio}}</h3><br>
+          <h3><a class="btn btn-danger btn-round" type="button" style="margin-top: 32px; background-color: #DE503E; border-color: #DE503E;"onclick="location.href='http://localhost:4200/#/cart'">Add to Cart</a></h3>
 
-
-          <h3>{{habitacion.des}}</h3>
-                  <h3>Hotel: {{habitacion.hotelId}}</h3>
-                  <h3>Tipo de habitacion: {{habitacion.tipo}}</h3>
-                  <h3>Capacidad de personas: {{habitacion.cantidad}}</h3>
-                  <h3>Numero de Camas: {{habitacion.camas}}</h3>
-                  <h3>Precio: {{habitacion.precio}}</h3>
-
-        <h3 class="title ml-3 mt-10" 
-        
-        style="font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: 23px; text-align: right; font-weight: 400;">${{habitacion.precio}}.00 MXN</h3>
-
+        <h3 class="title ml-10 mt-400" 
+        type= "button "style="font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: 23px; text-align: right; font-weight: 400;">${{habitacion.precio}}.00 MXN</h3>
       </div>
-
-
     </div>
   </div>
 </div>
