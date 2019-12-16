@@ -6,9 +6,12 @@
     <p class="card-text"><small class="text-muted">¡Excelente ubicación! 9.5</small></p><br>
     <p class="card-text">{{prod.ciudad}}</p><br>
     <p style="text-align: right;">${{prod.precio}} MXN</p>
-    <p><a class="btn btn-danger btn-round" 
+    <p><a class="btn btn-danger btn-round-lg" 
       (click)="search(txtSearch.value)" 
-      type="button" style="margin-top: 32px; background-color:
-       #DE503E; border-color: #DE503E;">Reservar</a></p>
+      type="button">Detalle</a></p>
+      <div class="cta">
+        <button class="btn"onclick="location.href='http://localhost:4200/#/cart'">Add to cart<span class="bg" ></span></button>
+      </div>
+      <div class="bg"></div>
   </div>
 </div>

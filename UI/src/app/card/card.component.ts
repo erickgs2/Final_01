@@ -5,7 +5,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styles: []
+  styleUrls: ['./card.component.css'] 
+  //styles: []
 })
 export class CardComponent implements OnInit {
   @Input() ciudad: any[] = [];
