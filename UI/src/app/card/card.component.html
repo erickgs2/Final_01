@@ -9,9 +9,15 @@
     <p><a class="btn btn-danger btn-round-lg" 
       (click)="search(txtSearch.value)" 
       type="button">Detalle</a></p>
+      <!--<div class="cta">
+        <button class="btn" onclick="location.href='http://localhost:4200/#/cart'">Add to cart<span class="bg" ></span></button>
+      </div>-->
       <div class="cta">
-        <button class="btn"onclick="location.href='http://localhost:4200/#/cart'">Add to cart<span class="bg" ></span></button>
+        <button class="btn" (click)="onAddToCart">Agregar a reservas<span class="bg" ></span></button>
       </div>
+      <!--<div class="col-4-sm add-cart-wrapper cta">
+        <button type="button" class="cart" (click)="onAddToCart()"><img src="../../assets/cart_primary.svg" alt="" /></button>
+      </div>-->
       <div class="bg"></div>
   </div>
 </div>

@@ -23,10 +23,11 @@ const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'login',      component: LoginComponent, data: { title: 'Inicio de sesión', icon: '' } },
-    { path: 'cart',      component: CarritoComponent, data: { title: 'Carrito', icon: '' } },
+    { path: 'carrito',      component: CarritoComponent, data: { title: 'Carrito', icon: '' } },
     { path: 'detalle/:code',      component: DetalleComponent, data: { title: 'Detalle de Habitacion', icon: '' } },
     { path: 'busqueda/:criterio',      component: BusquedaComponent, data: { title: 'Resultados', icon: '' } },
     { path: 'microServicio',      component: MicroServicioComponent, data: { title: 'Microservicio', icon: '' } }
+  
 ];
 
 @NgModule({
