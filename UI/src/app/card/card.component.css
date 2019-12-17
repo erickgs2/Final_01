@@ -37,6 +37,7 @@
   .card {
     border-radius: 25px;
     box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
+    
   }
 
   .espacio{
@@ -47,7 +48,9 @@
   .lateral{
     padding-left: 30px;
     text-align: left;
-    display: block;
+    display: flex;
+    flex: 70%;
+    width: 100%;
   }
 
   .btn-acomodo{
@@ -63,9 +66,12 @@
 
   .btn-verde{
     margin-top:10px;
-    background-color: #45D191;
+    background-color: rgba(101,240,96,1);
     border: #45D298;
-
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left: 5px;
+    padding-right: 5px;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
     color: white;
@@ -151,6 +157,7 @@
     height: 255px;
     background: #fff;
     border-radius: 0 0 25px 25px;
+    width:100%;
   }
   
   .product-title {
@@ -324,6 +331,6 @@
 
   .conFlex{
     display: flex;
-    width: 50%;
+    width: 90%;
   }
   
