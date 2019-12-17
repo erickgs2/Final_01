@@ -38,6 +38,63 @@
     border-radius: 25px;
     box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
   }
+
+  .espacio{
+    padding: 10px;
+    text-align: center;
+  }
+
+  .lateral{
+    padding-left: 30px;
+    text-align: left;
+    display: block;
+  }
+
+  .btn-acomodo{
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .precio{
+    border: 2px solid;
+    text-align: center;
+  }
+
+  .btn-verde{
+    margin-top:10px;
+    background-color: #45D191;
+    border: #45D298;
+
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 1 rem;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    width: 100%;
+    display: block;
+    text-align: center center;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-naranja{
+    background-color: #DE503E;
+    border: #DE5011;
+
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font: white;
+    color: white;
+    font-size: 1 rem;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    width: 100%;
+    display: block;
+    text-align: center center;
+    margin-bottom: 1.5rem;
+  }
+  
   
   .card-head {
     position: relative;
@@ -263,5 +320,10 @@
   .yt:hover
   {
     background: rgba(0,0,0,0.2);
+  }
+
+  .conFlex{
+    display: flex;
+    width: 50%;
   }
   

@@ -1,23 +1,23 @@
-<div class="card"  *ngFor="let prod of ciudad" (click)="VerDetalle(prod.id)">
+<div class="card espacio"  *ngFor="let prod of ciudad" (click)="VerDetalle(prod.id)">
+  <div class="conFlex">
   <img src="{{prod.img}}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h3 class="card-title" style="font-size: 20px;">{{prod.nombre}}</h3>
-    <p class="card-text">{{prod.des}}</p><br>
-    <p class="card-text"><small class="text-muted">¡Excelente ubicación! 9.5</small></p><br>
-    <p class="card-text">{{prod.ciudad}}</p><br>
-    <p style="text-align: right;">${{prod.precio}} MXN</p>
-    <p><a class="btn btn-danger btn-round-lg" 
-      (click)="search(txtSearch.value)" 
-      type="button">Detalle</a></p>
+    <h3 class="card-title espacio" style="font-size: 20px;">{{prod.nombre}}</h3>
+    <p class="card-text lateral">{{prod.des}}</p><br>
+    <p class="card-text lateral"><small class="text-muted">¡Excelente ubicación! 9.5</small></p><br>
+    <p class="card-text lateral">{{prod.ciudad}}</p><br>
+    <p class="precio" style="text-align: center;">${{prod.precio}} MXN</p>
+      <button type="button" class="btn btn-primary btn-lg" (click)="search(txtSearch.value)">Detalle</button>
       <!--<div class="cta">
         <button class="btn" onclick="location.href='http://localhost:4200/#/cart'">Add to cart<span class="bg" ></span></button>
       </div>-->
       <div class="cta">
-        <button class="btn" (click)="onAddToCart">Agregar a reservas<span class="bg" ></span></button>
+        <button class="btn btn-verde" (click)="onAddToCart">Agregar a reservas<span class="bg" ></span></button>
       </div>
       <!--<div class="col-4-sm add-cart-wrapper cta">
         <button type="button" class="cart" (click)="onAddToCart()"><img src="../../assets/cart_primary.svg" alt="" /></button>
       </div>-->
       <div class="bg"></div>
   </div>
+</div>
 </div>

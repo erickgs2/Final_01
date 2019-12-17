@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HabService } from '../../services/hab.service';
 import { Habitacion } from 'app/models/habitacion';
+
 
 @Component({
   selector: 'app-detalle',

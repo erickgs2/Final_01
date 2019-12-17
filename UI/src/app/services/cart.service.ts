@@ -20,7 +20,6 @@ export class CartService {
     let exists = false;
     const parsedPrice = parseFloat(Habitacion.precio.replace(/\./g, '').replace(',', '.'));
     this.cartTotal += parsedPrice;
-    // Search this product on the cart and increment the quantity
     this.reservas = this.reservas.map(_reserva => {
       if (_reserva.Habitacion.id === Habitacion.id) {
         _reserva.quantity++;
@@ -28,7 +27,6 @@ export class CartService {
       }
       return _reserva;
     });
-    // Add a new product to the cart if it's a new product
     if (!exists) {
       Habitacion.parsedPrice = parsedPrice;
       this.reservas.push({
